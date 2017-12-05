@@ -1,0 +1,30 @@
+<canvas id="tela" width="400" height="200"></canvas>
+
+<script>
+    var tela = document.querySelector("#tela");
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = "green";
+    pincel.fillRect(0, 0, 400, 200);
+
+
+    // losango
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(200, 30);
+    pincel.lineTo(30, 100);
+    pincel.lineTo(370, 100);
+    pincel.fill();
+
+    pincel.beginPath();
+    pincel.moveTo(200, 170);
+    pincel.lineTo(30, 100);
+    pincel.lineTo(370, 100);
+    pincel.fill();
+
+    // circulo
+    pincel.fillStyle = 'darkblue';
+    pincel.beginPath();
+    pincel.arc(200, 100, 50, 0, 2 * Math.PI);
+    pincel.fill();
+</script>
